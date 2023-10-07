@@ -20,7 +20,9 @@ npm i
 npm run dev
 ```
 
-Use your browser to access http://localhost:3000, and then you can test the demo (connect wallet, send ADA, redeem ADA)
+Use your browser to access http://localhost:3000, you need to switch to the *preprod* test network in the settings of nami wallet first.
+
+And then you can test the demo (connect wallet, send tADA, redeem tADA)
 
 ## Build Project
 

@@ -4,7 +4,7 @@ Yoroi Wallet(Only supports mainnet): https://chrome.google.com/webstore/detail/y
 
 Nami Wallet(Supports mainnet, preview and preprod testnet): https://chrome.google.com/webstore/detail/nami/lpfcbjknijpeeillifnkikgncikgfhdo
 
-## Get test token (tADA)
+## Get Test Token (tADA)
 
 https://docs.cardano.org/cardano-testnet/tools/faucet
 

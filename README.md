@@ -4,6 +4,7 @@ Yoroi: https://chrome.google.com/webstore/detail/yoroi/ffnbelfdoeiohenkjibnmadji
 
 Only supports mainnet
 
+
 Nami: https://chrome.google.com/webstore/detail/nami/lpfcbjknijpeeillifnkikgncikgfhdo
 
 Supports mainnet, preview and preprod testnet

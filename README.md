@@ -25,6 +25,8 @@ npm i
 npm run dev
 ```
 
+Use your browser to access http://localhost:3000, and then you can test the demo (connect wallet, send ADA, redeem ADA)
+
 ## Build Project
 
 ```

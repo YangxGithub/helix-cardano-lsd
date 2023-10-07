@@ -1,13 +1,8 @@
 ## Install Wallet
 
-Yoroi: https://chrome.google.com/webstore/detail/yoroi/ffnbelfdoeiohenkjibnmadjiehjhajb
+Yoroi Wallet(Only supports mainnet): https://chrome.google.com/webstore/detail/yoroi/ffnbelfdoeiohenkjibnmadjiehjhajb
 
-Only supports mainnet
-
-
-Nami: https://chrome.google.com/webstore/detail/nami/lpfcbjknijpeeillifnkikgncikgfhdo
-
-Supports mainnet, preview and preprod testnet
+Nami Wallet(Supports mainnet, preview and preprod testnet): https://chrome.google.com/webstore/detail/nami/lpfcbjknijpeeillifnkikgncikgfhdo
 
 ## Get test token (tADA)
 

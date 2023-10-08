@@ -4,7 +4,7 @@ import { BrowserWallet } from "@meshsdk/core";
 import { koios } from "./koios";
 import getTxBuilder from "./getTxBuilder";
 import { toPlutsUtxo } from "./mesh-utils";
-import { scriptTestnetAddr, script } from "../../contracts/helloPluts";
+import { scriptTestnetAddr, script } from "../../contracts/stakeContract";
 
 async function getUnlockTx(wallet: BrowserWallet): Promise<Tx> {
     const myAddrs = (await wallet.getUsedAddresses()).map(Address.fromString);
@@ -63,7 +63,7 @@ async function getUnlockTx(wallet: BrowserWallet): Promise<Tx> {
                 inputScript: {
                     script,
                     datum: "inline", // the datum is present already on `utxoToSpend`
-                    redeemer: new DataB(fromAscii("Hello plu-ts")) // be polite
+                    redeemer: new DataB(fromAscii("Hello helix-lsd")) // be polite
                 }
             }
         ],

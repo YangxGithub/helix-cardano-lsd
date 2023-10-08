@@ -1,14 +1,14 @@
 import { Address, PScriptContext, PaymentCredentials, Script, bool, compile, data, makeValidator, pBool, pfn, PPubKeyHash, bs } from "@harmoniclabs/plu-ts";
 
 
-const helloPluts = pfn([
+const stakeContract = pfn([
     PPubKeyHash.type,
     bs,
     PScriptContext.type
 ], bool)
     ((owner, message, ctx) => {
 
-        const isBeingPolite = message.eq("Hello plu-ts");
+        const isBeingPolite = message.eq("Hello helix-lsd");
 
         const signedByOwner = ctx.tx.signatories.some(owner.eqTerm);
 
@@ -21,7 +21,7 @@ const helloPluts = pfn([
 // ------------------------------------------------------------- //
 ///////////////////////////////////////////////////////////////////
 
-export const untypedValidator = makeValidator(helloPluts);
+export const untypedValidator = makeValidator(stakeContract);
 
 export const compiledContract = compile(untypedValidator);
 

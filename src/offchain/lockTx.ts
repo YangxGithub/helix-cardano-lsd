@@ -3,7 +3,7 @@ import { BrowserWallet } from "@meshsdk/core";
 import koios from "./koios";
 import getTxBuilder from "./getTxBuilder";
 import { toPlutsUtxo } from "./mesh-utils";
-import { scriptTestnetAddr } from "../../contracts/helloPluts";
+import { scriptTestnetAddr } from "../../contracts/stakeContract";
 
 async function getLockTx(wallet: BrowserWallet): Promise<Tx> {
     // creates an address form the bech32 form

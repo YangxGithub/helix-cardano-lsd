@@ -1,6 +1,6 @@
 ## Technical Flow
 
-![image](https://github.com/ZKHelixlabs/helix-cardano-lsd/blob/main/Technical_Flow.png)
+![image](https://github.com/ZKHelixlabs/helix-cardano-lsd/blob/main/Technical_Flow.jpg)
 
 ## Product Prototype Figma
 

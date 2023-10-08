@@ -1,3 +1,11 @@
+## Technical Flow
+
+![image](https://github.com/ZKHelixlabs/helix-cardano-lsd/blob/main/Technical_Flow.png)
+
+## Product Prototype Figma
+
+https://www.figma.com/file/KwuzaXJFa0OPXJW2I5NCLc/Helix-LSD
+
 ## Install Wallet
 
 Yoroi Wallet(Only supports mainnet, can easily choose a stake pool to delegate and stake ADA): https://chrome.google.com/webstore/detail/yoroi/ffnbelfdoeiohenkjibnmadjiehjhajb

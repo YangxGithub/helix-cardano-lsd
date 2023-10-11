@@ -4,10 +4,8 @@ import { Response } from 'node-fetch';
 
 const walletId: string = "101b3814d6977de4b58c9dedc67b87c63a4f36dd";
 const totalExpectedLovelace: number = 1000000;
-const resp: Response = await fetch(`http://localhost:9998/v2/network/information`);
+const resp: Response = await fetch(`http://localhost:9998/v2/wallets/${walletId}`);
 const wallet: any = await resp.json();
-console.log(wallet);
-
 const balance: number = wallet.balance.total.quantity;
 
 // Check if payment is complete

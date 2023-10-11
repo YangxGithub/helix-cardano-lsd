@@ -19,6 +19,7 @@
     "@meshsdk/core": "^1.5.2",
     "@meshsdk/react": "^1.1.7",
     "@types/node": "18.15.11",
+    "@types/node-fetch": "^2.6.6",
     "@types/react": "18.0.35",
     "@types/react-dom": "18.0.11",
     "eslint": "8.38.0",

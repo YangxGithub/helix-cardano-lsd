@@ -1,9 +1,12 @@
-import { Tx, Address, Value, DataB } from "@harmoniclabs/plu-ts";
+import { Tx, Address, PaymentCredentials, TxBuilder, Value, pBSToData, pByteString, pIntToData } from "@harmoniclabs/plu-ts";
 import { BrowserWallet } from "@meshsdk/core";
 import koios from "./koios";
 import getTxBuilder from "./getTxBuilder";
 import { toPlutsUtxo } from "./mesh-utils";
-import { scriptTestnetAddr } from "../../contracts/stakeContract";
+import { scriptMainnetAddr } from "../contracts/stakeContract";
+import VestingDatum from "../VestingDatum";
+
+const beneficiary = Address.fromString('addr1v8g3t56p8rqm4gh9zmu9rx4y5n00qwn0qll7a2ra9z9hlfq0vsrkr');
 
 async function getLockTx(wallet: BrowserWallet): Promise<Tx> {
     // creates an address form the bech32 form
@@ -15,28 +18,26 @@ async function getLockTx(wallet: BrowserWallet): Promise<Tx> {
     const myUTxOs = (await wallet.getUtxos()).map(toPlutsUtxo);
 
     if (myUTxOs.length === 0) {
-        throw new Error("have you requested funds from the faucet?")
+        throw new Error("Do you have ADA in your wallet?")
     }
 
     const utxo = myUTxOs.find(u => u.resolved.value.lovelaces > 15_000_000);
 
     if (utxo === undefined) {
-        throw "not enough ada";
+        throw "Not enough ADA";
     }
 
     return txBuilder.buildSync({
         inputs: [{ utxo }],
         outputs: [
             { // output holding the funds that we'll spend later
-                address: scriptTestnetAddr,
+                address: scriptMainnetAddr,
                 // 10M lovelaces === 10 ADA
                 value: Value.lovelaces(10_000_000),
                 // remeber to include a datum
-                datum: new DataB(
-                    // remember we set the datum to be the public key hash?
-                    // we can extract it from the address as follows
-                    myAddr.paymentCreds.hash.toBuffer()
-                )
+                datum: VestingDatum.VestingDatum({
+                    beneficiary: pBSToData.$(pByteString(beneficiary.paymentCreds.hash.toBuffer()))
+                })
             }
         ],
         // send everything left back to us

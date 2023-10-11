@@ -11,7 +11,7 @@ export default function Home() {
     const network = useNetwork();
     const toast = useToast();
 
-    if (typeof network === "number" && network !== 0) {
+    if (typeof network === "number" && network !== 1) {
         return (
             <div className={[
                 style.pageContainer,
@@ -21,7 +21,7 @@ export default function Home() {
                 <b style={{
                     margin: "auto 10vw"
                 }}>
-                    Make sure to set your wallet in testnet mode;<br />
+                    Make sure to set your wallet in mainnet mode;<br />
                     We are playing with founds here!
                 </b>
                 <Button
@@ -38,7 +38,7 @@ export default function Home() {
         lockTx(wallet)
             // lock transaction created successfully
             .then(txHash => toast({
-                title: `lock tx submitted: https://preprod.cardanoscan.io/transaction/${txHash}`,
+                title: `lock tx submitted: https://cardanoscan.io/transaction/${txHash}`,
                 status: "success"
             }))
             // lock transaction failed
@@ -55,7 +55,7 @@ export default function Home() {
         unlockTx(wallet)
             // unlock transaction created successfully
             .then(txHash => toast({
-                title: `unlock tx submitted: https://preprod.cardanoscan.io/transaction/${txHash}`,
+                title: `unlock tx submitted: https://cardanoscan.io/transaction/${txHash}`,
                 status: "success"
             }))
             // unlock transaction failed
@@ -77,7 +77,7 @@ export default function Home() {
             {
                 connected &&
                 <>
-                    <Button onClick={onLock} >Lock 10 tADA</Button>
+                    <Button onClick={onLock} >Lock 10 ADA</Button>
                     <Button onClick={onUnlock} >Unlock</Button>
                 </>
             }

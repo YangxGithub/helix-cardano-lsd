@@ -1,18 +1,17 @@
-import { Address, PScriptContext, PaymentCredentials, Script, bool, compile, data, makeValidator, pBool, pfn, PPubKeyHash, bs } from "@harmoniclabs/plu-ts";
+import { Address, bool, bs, compile, data, int, lam, makeValidator, papp, PaymentCredentials, pBool, pfn, phoist, pif, pintToBS, plet, pmatch, precursive, PScriptContext, pStr, ptrace, ptraceIfFalse, punsafeConvertType, Script, ScriptType, pstruct, PPubKeyHash } from "@harmoniclabs/plu-ts";
 
+import VestingDatum from "../VestingDatum";
 
 const stakeContract = pfn([
-    PPubKeyHash.type,
-    bs,
+    VestingDatum.type,
+    data,
     PScriptContext.type
 ], bool)
-    ((owner, message, ctx) => {
+    ((datum, _redeemer, ctx) => {
+        // inlined
+        const signedByBeneficiary = ctx.tx.signatories.some(datum.beneficiary.eqTerm);
 
-        const isBeingPolite = message.eq("Hello helix-lsd");
-
-        const signedByOwner = ctx.tx.signatories.some(owner.eqTerm);
-
-        return isBeingPolite.and(signedByOwner);
+        return signedByBeneficiary;
     });
 
 ///////////////////////////////////////////////////////////////////
@@ -34,3 +33,10 @@ export const scriptTestnetAddr = new Address(
     "testnet",
     PaymentCredentials.script(script.hash)
 );
+
+export const scriptMainnetAddr = new Address(
+    "mainnet",
+    PaymentCredentials.script(script.hash)
+);
+
+export default stakeContract;

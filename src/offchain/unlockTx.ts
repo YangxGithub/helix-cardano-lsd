@@ -4,7 +4,7 @@ import { BrowserWallet } from "@meshsdk/core";
 import { koios } from "./koios";
 import getTxBuilder from "./getTxBuilder";
 import { toPlutsUtxo } from "./mesh-utils";
-import { scriptTestnetAddr, script } from "../../contracts/stakeContract";
+import { scriptMainnetAddr, script } from "../contracts/stakeContract";
 
 async function getUnlockTx(wallet: BrowserWallet): Promise<Tx> {
     const myAddrs = (await wallet.getUsedAddresses()).map(Address.fromString);
@@ -22,7 +22,7 @@ async function getUnlockTx(wallet: BrowserWallet): Promise<Tx> {
     let myAddr!: Address;
 
     // only the onses with valid datum
-    const utxoToSpend = (await koios.address.utxos(scriptTestnetAddr))
+    const utxoToSpend = (await koios.address.utxos(scriptMainnetAddr))
         .find(utxo => {
             const datum = utxo.resolved.datum;
 

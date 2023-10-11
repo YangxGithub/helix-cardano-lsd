@@ -16,7 +16,7 @@ export default async function getTxBuilder(): Promise<TxBuilder>
             const pp = await koios.epoch.protocolParams() as Readonly<ProtocolParamters>;
 
             _cachedTxBuilder = new TxBuilder(
-                "testnet",
+                "mainnet",
                 pp
             );
         }
@@ -25,7 +25,7 @@ export default async function getTxBuilder(): Promise<TxBuilder>
             // !!! IMPORTANT !!! use only as fallback;
             // parameters might (and will) change from the real world
             _cachedTxBuilder = new TxBuilder(
-                "testnet",
+                "mainnet",
                 defaultProtocolParameters
             );
         }

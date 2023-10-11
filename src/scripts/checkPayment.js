@@ -5,7 +5,7 @@ import cmd from 'node-cmd';
 // Path to the cardano-cli binary or use the global one
 const CARDANO_CLI_PATH = "cardano-cli";
 // The `testnet` identifier number
-const CARDANO_NETWORK_MAGIC = 1097911063;
+const CARDANO_NETWORK_MAGIC = 1;
 // The directory where we store our payment keys
 // assuming our current directory context is $HOME/receive-ada-sample/receive-ada-sample
 const CARDANO_KEYS_DIR = "keys";

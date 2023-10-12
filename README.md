@@ -37,3 +37,9 @@ And then you can test the demo (connect wallet, send tADA, redeem tADA)
 ```
 npm run build
 ```
+
+## Mainnet Demo
+
+```
+https://nftstorage.link/ipfs/bafybeic2orungqttzc3sdcom6v7zwdsvaz6grv5v536n4lffhtk2xsunxy
+```

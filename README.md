@@ -63,3 +63,7 @@ This is a temporary domain and can be changed to an official domain later.
 - [ ] Send ADA to user
 
 - [x] Delegate stake contract to stake pool
+
+## Stake Contract Address
+
+https://cardanoscan.io/address/addr1zxc926kytyexmkq9npanhv2pvj7rzsxqwnerh3c09twxa9fpvv7gwasnw0nw4cdzquzz7l6k8azs34w3j29d8glev64q34hyk8

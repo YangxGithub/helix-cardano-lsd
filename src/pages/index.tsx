@@ -38,7 +38,7 @@ export default function Home() {
         lockTx(wallet)
             // lock transaction created successfully
             .then(txHash => toast({
-                title: `lock tx submitted: https://cardanoscan.io/transaction/${txHash}`,
+                title: `stake tx submitted: https://cardanoscan.io/transaction/${txHash}`,
                 status: "success"
             }))
             // lock transaction failed
@@ -55,7 +55,7 @@ export default function Home() {
         unlockTx(wallet)
             // unlock transaction created successfully
             .then(txHash => toast({
-                title: `unlock tx submitted: https://cardanoscan.io/transaction/${txHash}`,
+                title: `unstake tx submitted: https://cardanoscan.io/transaction/${txHash}`,
                 status: "success"
             }))
             // unlock transaction failed
@@ -77,8 +77,8 @@ export default function Home() {
             {
                 connected &&
                 <>
-                    <Button onClick={onLock} >Lock 10 ADA</Button>
-                    <Button onClick={onUnlock} >Unlock</Button>
+                    <Button onClick={onLock} >Stake 10 ADA(+2 fee ADA, +2 inscription ADA) </Button>
+                    <Button onClick={onUnlock} >Unstake</Button>
                 </>
             }
         </div>

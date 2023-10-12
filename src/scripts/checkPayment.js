@@ -13,13 +13,13 @@ const CARDANO_KEYS_DIR = "keys";
 const TOTAL_EXPECTED_LOVELACE = 1000000;
 
 // Read wallet address string value from payment.addr file
-const walletAddress = 'addr_test1wp97ley0p7xqksmh6tq3c6v8depl9jpfvnkk68d29fwznmcmlpuqk';
+const walletAddress = 'addr1zxc926kytyexmkq9npanhv2pvj7rzsxqwnerh3c09twxa9fpvv7gwasnw0nw4cdzquzz7l6k8azs34w3j29d8glev64q34hyk8';
 
 // We use the node-cmd npm library to execute shell commands and read the output data
 const rawUtxoTable = cmd.runSync([
     CARDANO_CLI_PATH,
     "query", "utxo",
-    "--testnet-magic", CARDANO_NETWORK_MAGIC,
+    "--mainnet",
     "--address", walletAddress
 ].join(" "));
 

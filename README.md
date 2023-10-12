@@ -48,3 +48,18 @@ https://ada.helixlsd.com/
 You need to install the Nami wallet first, and there needs to be at least 15 ADA in the wallet.
 
 This is a temporary domain and can be changed to an official domain later.
+
+## TODO List
+
+- [x] Connect Nami Wallet
+
+- [x] Stake ADA to stake contract
+- [ ] Listening Stake Event
+- [ ] Mint stADA to user
+
+- [ ] Unstake stADA to stake contract
+- [ ] Listening Unstake Event
+- [ ] Burn stADA to blackhole
+- [ ] Send ADA to user
+
+- [x] Delegate stake contract to stake pool

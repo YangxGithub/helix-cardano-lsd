@@ -8,13 +8,7 @@ https://www.figma.com/file/KwuzaXJFa0OPXJW2I5NCLc/Helix-LSD
 
 ## Install Wallet
 
-Yoroi Wallet(Only supports mainnet, can easily choose a stake pool to delegate and stake ADA): https://chrome.google.com/webstore/detail/yoroi/ffnbelfdoeiohenkjibnmadjiehjhajb
-
-Nami Wallet(Supports mainnet, preview and preprod testnet, need to install this wallet to test the demo on the testnet): https://chrome.google.com/webstore/detail/nami/lpfcbjknijpeeillifnkikgncikgfhdo
-
-## Get Test Token (tADA)
-
-https://docs.cardano.org/cardano-testnet/tools/faucet
+Nami Wallet: https://chrome.google.com/webstore/detail/nami/lpfcbjknijpeeillifnkikgncikgfhdo
 
 ## Install Dependencies
 
@@ -27,10 +21,6 @@ npm i
 ```
 npm run dev
 ```
-
-Use your browser to access http://localhost:3000, you need to switch to the *preprod* test network in the settings of nami wallet first.
-
-And then you can test the demo (connect wallet, send tADA, redeem tADA)
 
 ## Build Project
 
@@ -53,5 +43,8 @@ npx pm2 logs
 ## Mainnet Demo
 
 ```
-http://54.183.103.173:3000/
+https://ada.helixlsd.com/
 ```
+You need to install the Nami wallet first, and there needs to be at least 15 ADA in the wallet.
+
+This is a temporary domain and can be changed to an official domain later.

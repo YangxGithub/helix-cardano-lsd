@@ -29,7 +29,7 @@ export default function Home() {
                     style={{
                         margin: "auto 10vw"
                     }}
-                >Refersh page</Button>
+                >Refresh page</Button>
             </div>
         )
     }

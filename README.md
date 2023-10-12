@@ -62,7 +62,7 @@ This is a temporary domain and can be changed to an official domain later.
 - [ ] Burn stADA to blackhole
 - [ ] Send ADA to user
 
-- [x] Delegate stake contract to stake pool
+- [x] Delegate stake contract to stake pool (Let’s temporarily use someone else’s pool first, and then we can change it to our own pool later)
 
 ## Stake Contract Address
 

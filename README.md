@@ -41,13 +41,13 @@ npm run build
 ## Run Scripts on Server
 
 ```
-pm2 start
+npx pm2 start
 ```
 
 ## Check Scripts Logs on Server
 
 ```
-pm2 logs
+npx pm2 logs
 ```
 
 ## Mainnet Demo

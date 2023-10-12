@@ -38,8 +38,20 @@ And then you can test the demo (connect wallet, send tADA, redeem tADA)
 npm run build
 ```
 
+## Run Scripts on Server
+
+```
+pm2 start
+```
+
+## Check Scripts Logs on Server
+
+```
+pm2 logs
+```
+
 ## Mainnet Demo
 
 ```
-https://nftstorage.link/ipfs/bafybeic2orungqttzc3sdcom6v7zwdsvaz6grv5v536n4lffhtk2xsunxy
+http://54.183.103.173:3000/
 ```

@@ -51,6 +51,10 @@ This is a temporary domain and can be changed to an official domain later.
 
 ## TODO List
 
+- [x] Tech Flow
+- [x] Product Prototype
+- [ ] UI Draft
+
 - [x] Connect Nami Wallet
 
 - [x] Stake ADA to stake contract

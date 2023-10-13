@@ -51,21 +51,26 @@ This is a temporary domain and can be changed to an official domain later.
 
 ## TODO List
 
+------- Prepare -------
 - [x] Tech Flow
 - [x] Product Prototype
 - [ ] UI Draft
 
+------- Wallet -------
 - [x] Connect Nami Wallet
 
+------- Stake -------
 - [x] Stake ADA to stake contract
 - [ ] Listening Stake Event
 - [ ] Mint stADA to user
 
+------- Unstake -------
 - [ ] Unstake stADA to stake contract
 - [ ] Listening Unstake Event
 - [ ] Burn stADA to blackhole
 - [ ] Send ADA to user
 
+------- Delegate -------
 - [x] Delegate stake contract to stake pool (Let’s temporarily use someone else’s pool first, and then we can change it to our own pool later)
 
 ## Stake Contract Address
